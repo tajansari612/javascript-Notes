@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: hsl(240, 1%, 13%);
+    color: wheat;
+    padding: auto;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    font-size: 21px;
+}
+
+.clock{
+    padding: 15px 30px 4px 30px;
+    font-size: 24px;
+    border-radius: 10px;
+    min-height: 40px;
+    min-width: 100px;
+    background-color: chocolate;
+}

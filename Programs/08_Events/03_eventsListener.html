@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+    <style>
+        body{
+            background-color: #212121;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 5px solid honeydew;
+            font-size: 30px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!--Event listener are the events which can used in the javascript-->
+    <div class="container">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <input type="text" name="text" id="text">
+        <div class="box" id="box4">box4</div>
+        <div class="box" id="box5">box5</div>
+    </div>
+</body>
+<script>
+    // Event listeners
+    const box1 = document.querySelector('#box1')
+    const box2 = document.querySelector('#box2')
+    const box3 = document.querySelector('#box3')
+    const box4 = document.querySelector('#box4')
+    const box5 = document.querySelector('#box5')
+    const text = document.querySelector('#text')
+
+    box1.addEventListener('click',(e) =>{
+        console.log("Box1 clicked!")
+    })
+
+    box2.addEventListener('click',(e) =>{
+        console.log("Event Object: ",e.clientX,e.clientY)
+    })
+
+    text.addEventListener('keydown',(e) =>{
+        console.log("Key", e.key)
+    })
+
+    box5.addEventListener('click',(e) =>{
+        const style = document.querySelector('style');
+        console.log(style);
+        const s1 = style.innerHTML;    
+        style.innerHTML = '';
+        setInterval(() =>{
+            style.innerHTML = s1;
+        },2000)
+    })
+</script>
+</html>
