@@ -9,28 +9,19 @@
             margin: 0px;
             padding: 0px;
         }
-        .container{
+        body{
             height: 100vh;
             background-color: #212121;
             color: blanchedalmond;
         }
     </style>
 </head>
-<body>
+<body class="body">
     <div class="container" ">
         <h1>Start should change the background color every second!</h1>
         <button id="startBtn">start</button>
         <button id="stopBtn">stop</button>
     </div>
 </body>
-<script>
-    const startBtn = document.querySelector('#startBtn');
-    const stopBtn = document.querySelector('#stopBtn')
-    const container = document.querySelector('.container');
-
-    let backChange;
-    startBtn.addEventListener('click',(e) =>{
-        backChange = container.style.backgroundColor = "#"
-    })
-</script>
+<script src="01_app.js"></script>
 </html>
