@@ -5,9 +5,11 @@ function AddTwoNumbers(num1 , num2){
 }
 
 //AddTwoNumbers(5,7);
-let ans = AddTwoNumbers(98,56);
-ans = AddTwoNumbers(98,"467");
-ans = AddTwoNumbers(98,"d");
+let ans = AddTwoNumbers(98,56);   //154
+console.log(ans);
+ans = AddTwoNumbers(98,"467");    //98467
+console.log(ans);
+ans = AddTwoNumbers(98,"d");     //98d
 console.log(ans);
 
 function loginUserMessage(username){
@@ -22,9 +24,15 @@ console.log(loginUserMessage("taj"));
 
 
 function addNumbers(val1,val2,...numbers){          //numbers acts as an array it stores all the arguments
-    return numbers;
+    let sum=0;
+    let n=numbers.length-1;
+    while(n>=0){
+        sum+=numbers[n];
+        n--;
+    }
+    return val1+val2+sum;
 }
-console.log(addNumbers(5,7,8,902,2,5,67,9));
+console.log(addNumbers(5,7,8,902,2,5,67,9));   //addition of all the numbers i.e 1005
 
 
 const obj1 = {

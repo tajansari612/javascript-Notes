@@ -1,7 +1,7 @@
 if(true){
     let a = 30;
     const b = 60;
-    var c = 90;
+    var c = 90;    //var keyword set the variable in global scope
 }
 
 //console.log(a);   //Error
